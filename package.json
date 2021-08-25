@@ -1,0 +1,5 @@
+{
+  "name": "test-coverage-push-script",
+  "version": "0.0.1",
+  "bin": "./index.js"
+}
