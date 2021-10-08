@@ -43,7 +43,7 @@ const codeCoverageData = codeCoverageString
 
 const dataIsValid = codeCoverageData.every(el => {
     const t1 = ['Statements', 'Branches', 'Functions', 'Lines'].includes(el.coverageType)
-    const t2 = el.coverageCount.split('/')[0] <= el.coverageCount.split('/')[1]
+    const t2 = parseInt(el.coverageCount.split('/')[0]) <= parseInt(el.coverageCount.split('/')[1])
     const t3 = !!parseFloat(el.coveragePercentage) && el.coveragePercentage.includes('%')
     return t1 && t2 && t3
 })
